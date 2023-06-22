@@ -66,8 +66,8 @@ font-family: outfit;
 font-weight: 700;
 }
 .banner{
-  margin-top: 400px;
+top: 400px;
  position: fixed;
   width: auto;
-  margin: - auto;
+  margin: 0 auto;
 }
