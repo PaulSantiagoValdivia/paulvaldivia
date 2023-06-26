@@ -1,10 +1,7 @@
 import styles from './main.module.css'
 import Icon from '@/assets/Icon'
-import Img from '@/public/vector.png'
-import Carrusel from '@/public/carrusel.png'
 
 export default function Main() {
-  const vector = Img.default; // Accede a la propiedad 'default' del módulo
 
   return (
     <>
