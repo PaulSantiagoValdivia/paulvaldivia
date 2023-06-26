@@ -71,40 +71,79 @@
 }
 
 .banner {
-  top: 400px;
-  position: fixed;
+  top: 450px;
+  position: initial;
 
-  width: auto;
-  margin: 0 auto;
 
 }
-
+.img2{
+  width: 100%;
+}
+.img{
+  width: 100%;
+}
 .carrusel {
-  top: 700px;
-
-  position: fixed;
+  top: 580px;
+  position: initial;
   height: 20px;
 }
 
 @media (min-width: 1024px) {
-  .banner {
-    position: relative;
-    top: 00px;
-    /* Ajusta el valor según tu diseño */
-    max-width: 90%;
-    /* Ajusta el ancho máximo según tu diseño */
-    margin-left: 444px;
-    transform: translateX(-50%);
-    /* Ajusta los estilos según tus necesidades */
+  .contentTitle {
+
+    flex-direction: row;
+    width: auto;
   }
 
+  .title {
+    font-size: 55px;
+    font-family: Syne;
+    font-weight: 800;
+  }
+
+  .info {
+    align-items: flex-start;
+    
+  }
+
+  .presentation {
+    text-align: start;
+    width: 500px;
+    margin-left: 78px;
+  }
+  .tecnologies {
+    margin-left: 78px;
+    width: 520px;
+    text-align: start;
+    color: #999;
+    font-size: 18px;
+
+  }
+.ancor{
+  margin-left: 78px;
+}
+
+  .banner {
+    position: relative; 
+    top: -50px;
+      /* Ajusta los estilos según tus necesidades */
+  }
+.img2{
+      width: 100%; /* El ancho se ajustará automáticamente */
+    height: auto; /* La altura se ajustará proporcionalmente */
+  
+  }
   .carrusel {
     position: relative;
-    top: 00px;
+    top: -25px;
     height: 20px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
   }
 
   .img {
+    height: 50px;
     max-width: 100%;
   }
 }
