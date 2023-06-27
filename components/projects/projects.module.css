@@ -94,6 +94,30 @@ background: #0D0D0D;
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
 }
+.carouselContainer {
+  /* Estilos para el contenedor del carrusel */
+  position: relative;
+  overflow: hidden;
+  
+}
+
+
+.carousel {
+  /* Estilos del carrusel */
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 40px;
+  
+}
+
+.carouselImage {
+  /* Estilos de las imágenes del carrusel */
+  width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
+  object-fit: cover; /* Ajusta el tipo de ajuste según tus necesidades */
+}
+.imgInactive{
+  opacity: 0.5;
+}
 @media (min-width: 1024px) {
   
   .contentProjects{
