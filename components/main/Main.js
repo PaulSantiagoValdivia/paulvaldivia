@@ -19,9 +19,6 @@ export default function Main() {
         <div className={styles.banner}>
           <img className={styles.img2} src="/vector.png" alt="Imagen vector" />
         </div>
-        <div className={styles.carrusel}>
-          <img className={styles.img} src="/carrusel.png" alt="Imagen carrusel" />
-        </div>
       </div>
     </>
   );
