@@ -14,15 +14,6 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.slide.right {
-  transform: translateX(50%);
-  opacity: 0.5;
-}
-
-.slideEnter {
-  opacity: 1 !important;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
 
 .rotate {
   animation-name: rotation;
@@ -33,28 +24,20 @@
   
 }
 
-.slideExit {
-  animation-name: slideExit;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
 
-@keyframes slideExit {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 100px;
-  }
-}
+
 
 @keyframes rotation {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(-00%);
+  
   }
+50%{
+  transform: translateX(50%);
+  
+}
   100% {
-    transform: rotate(180deg);
-  }
+    transform: translateX(100%);
+      opacity: -0.5;
+    }
 }

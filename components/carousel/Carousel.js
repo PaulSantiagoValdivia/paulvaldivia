@@ -23,14 +23,39 @@ const Carousel = () => {
         const lastImage = prevImages[prevImages.length - 1];
         return [lastImage, ...prevImages.slice(0, prevImages.length - 1)];
       });
-    }, 200);
+    }, 2000);
 
-    return () => clearInterval(interval);
   }, []);
 
   const handleImageLoad = (event, index) => {
-    if (index === 0 || index === images.length - 1) {
-      event.target.classList.add(styles.slideExit);
+   if(index === 0){
+      event.target.classList.add(styles.rotate);  
+    }else if(index === 1){
+      event.target.classList.add(styles.rotate);  
+    
+    }else if(index === 2){
+      event.target.classList.add(styles.rotate);  
+    
+    }else if(index === 3){
+      event.target.classList.add(styles.rotate);  
+    
+    }else if(index === 4){
+      event.target.classList.add(styles.rotate);  
+    
+    }else if(index === 5){
+      event.target.classList.add(styles.rotate);  
+    
+    }else if(index === 6){
+      event.target.classList.add(styles.rotate);  
+    }else if(index === 7){
+      event.target.classList.add(styles.rotate);  
+      }else if(index === 8){
+      event.target.classList.add(styles.rotate);  
+    } else if (index === images.length - 1) {
+      }else if(index === 9){
+      event.target.classList.add(styles.rotate);  
+    } else if (index === images.length - 1) {
+      event.target.classList.add(styles.rotate);
     }
   };
 
@@ -40,7 +65,7 @@ const Carousel = () => {
         <img
           key={index}
           src={`/${image}`} // Asegúrate de que la carpeta "images" esté correctamente ubicada dentro de la carpeta "public"
-          className={`${styles.slide} ${index === 0 ? styles.right : ''} ${index === 0 || index === images.length - 1 ? styles.rotate : ''}`}
+          className={`${styles.slide}  `}
           alt={`Imagen ${index + 1}`}
           onLoad={(event) => handleImageLoad(event, index)}
         />
