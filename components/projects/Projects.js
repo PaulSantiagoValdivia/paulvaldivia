@@ -69,12 +69,6 @@ export default function Projects() {
         <div className={styles.carouselContainer}>
           <div ref={carouselRef} className={styles.carousel}>
             <img
-              src="app.png"
-              alt="Image 1"
-              className={`${styles.carouselImage} ${currentIndex === 0 ? '' : styles.imgInactive}`}
-            />
-
-            <img
               src="mobile.png"
               alt="Image 2"
               className={`${styles.carouselImage} ${currentIndex === 1 ? '' : styles.imgInactive}`}
