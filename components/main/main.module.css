@@ -85,7 +85,7 @@ filter: blur(111px);
   flex-shrink: 0;
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
-  color: #FFF;
+  color: #999;
   font-size: 16px;
   font-family: outfit;
   font-style: normal;
@@ -97,8 +97,11 @@ filter: blur(111px);
   border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
   border-image-slice: 1;
   cursor: pointer;
+  color: #FFF;
 }
-
+.ancor:hover svg path{
+ stroke: #FFF; 
+}
 .banner {
   top: 300px;
   position: initial;

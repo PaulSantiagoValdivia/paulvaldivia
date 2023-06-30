@@ -58,6 +58,9 @@
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
 }
+.pageDesktop{
+  display: none;
+}
 
 .page:hover {
   border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
@@ -79,12 +82,22 @@
   background: #0D0D0D;
 }
 
+.github:hover svg path{
+  fill: white;
+}
+
+.page:hover svg path{
+  fill: white;
+}
 .github:hover {
   border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
   border-image-slice: 1;
   cursor: pointer;
+  fill: white;
 }
-
+.githubDesktop{
+  display: none;
+}
 .count {
   color: #999;
   font-size: 16px;
@@ -104,6 +117,13 @@
   border-radius: 8px;
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
+  cursor: pointer;
+}
+
+.previewDesktop {
+  display: none;
+  /* Oculta el botón en dispositivos móviles */
+
 }
 
 .next {
@@ -117,12 +137,18 @@
   border-radius: 8px;
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
+  cursor: pointer;
+
+}
+.icon:hover{
+    fill: white;
 }
 
 .carouselContainer {
   /* Estilos para el contenedor del carrusel */
   position: relative;
   overflow: hidden;
+  margin-top: 65px;
 
 }
 
@@ -170,13 +196,74 @@
   }
 
   .page {
-    width: 314px;
-    height: 64px;
+    display: none;
   }
 
   .github {
+    display: none;
+  }
+
+  .githubDesktop:hover svg path {
+    fill: #ffffff; /* Cambia el color a blanco */
+  }
+  
+  .pageDesktop:hover svg path {
+    fill: #ffffff; /* Cambia el color a blanco */
+  }
+  
+
+  .pageDesktop {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #1F1F1F;
+    background: #0D0D0D;
+    display: flex;
     width: 314px;
     height: 64px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    color: #999;
+font-size: 16px;
+font-family: outfit;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
 
+  .githubDesktop {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #1F1F1F;
+    background: #0D0D0D;
+    display: flex;
+    width: 314px;
+    height: 64px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    color: #999;
+    font-size: 16px;
+    font-family: outfit;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .githubDesktop:hover{
+    border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
+    border-image-slice: 1;
+    cursor: pointer;
+    color: #FFF;
+    
+  }
+  .pageDesktop:hover{
+    border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
+    border-image-slice: 1;
+    cursor: pointer;
+    color: #FFF;
   }
 }
