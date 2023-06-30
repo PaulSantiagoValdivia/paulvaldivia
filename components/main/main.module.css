@@ -6,7 +6,7 @@
   flex-shrink: 0;
   height: '100vh';
   margin: 0 auto;
-  
+
 }
 
 .title {
@@ -16,7 +16,7 @@
   font-size: 25px;
   font-family: Syne;
   font-weight: 800;
-  
+
 }
 
 .info {
@@ -52,45 +52,75 @@
   width: 312px;
   margin: 0;
 }
-
-.ancor {
-  margin-top: 37px;
-  display: flex;
-  width: 270px;
+.left{
+  width: 796px;
+height: 796px;
+left: -360px;
+flex-shrink: 0;
+border-radius: 796px;
+background: rgba(92, 107, 192, 0.10);
+filter: blur(111px);
+position: absolute;
+}
+.right{
+  right: 0px;
+  top: -100px;
+  position: absolute;
+  width: 596px;
+height: 796px;
+flex-shrink: 0;
+border-radius: 796px;
+background: rgba(174, 88, 177, 0.05);
+filter: blur(111px);
+}
+.ancor {  
+  margin: 0 auto;
+  margin-top: 77px;
+  width: 360px;
   padding: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 4px;
+  flex-shrink: 0;
+  border: 1px solid #1F1F1F;
   background: #0D0D0D;
-
-  border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
-  border-image-slice: 1;
   color: #FFF;
   font-size: 16px;
   font-family: outfit;
+  font-style: normal;
   font-weight: 700;
+  line-height: normal;
+}
+
+.ancor:hover{
+  border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
+  border-image-slice: 1;
+  cursor: pointer;
 }
 
 .banner {
-  top: 450px;
+  top: 300px;
   position: initial;
 
 
 }
-.img2{
+
+.img2 {
   width: 100%;
 }
-.img{
+
+.img {
   width: 100%;
 }
+
 .carrusel {
   top: 580px;
   position: initial;
   height: 20px;
 }
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   .contentTitle {
 
     flex-direction: row;
@@ -105,7 +135,7 @@
 
   .info {
     align-items: flex-start;
-    
+
   }
 
   .presentation {
@@ -113,6 +143,7 @@
     width: 500px;
     margin-left: 78px;
   }
+
   .tecnologies {
     margin-left: 78px;
     width: 520px;
@@ -121,20 +152,25 @@
     font-size: 18px;
 
   }
-.ancor{
-  margin-left: 78px;
-}
+
+  .ancor {
+    margin-left: 78px;
+  }
 
   .banner {
-    position: relative; 
+    position: relative;
     top: -50px;
-      /* Ajusta los estilos según tus necesidades */
+    /* Ajusta los estilos según tus necesidades */
   }
-.img2{
-      width: 100%; /* El ancho se ajustará automáticamente */
-    height: auto; /* La altura se ajustará proporcionalmente */
-  
+
+  .img2 {
+    width: 100%;
+    /* El ancho se ajustará automáticamente */
+    height: auto;
+    /* La altura se ajustará proporcionalmente */
+
   }
+
   .carrusel {
     position: relative;
     top: -25px;

@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './projects.module.css';
 import Next from '@/assets/Next';
 import Preview from '@/assets/Preview';
-
+import Explorer from '@/assets/Explorer';
+import Github from '@/assets/Github';
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
@@ -52,9 +53,10 @@ export default function Projects() {
           Connect all your social media and web3 links in one place, Mint them as an NFTs and own them forever.
         </p>
         <div className={styles.contentButtons}>
-          <button className={styles.page}>Ir a la página web</button>
-          <button className={styles.github}>Ir al repositorio en GitHub</button>
+          <button className={styles.github}><Github/> </button>
+          <button className={styles.page}><Explorer/> </button>
           <p className={styles.count}>{currentIndex}</p>
+      
           <button className={styles.preview} onClick={handlePreview}>
             <Preview />
           </button>

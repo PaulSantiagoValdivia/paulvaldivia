@@ -5,6 +5,8 @@ export default function Main() {
 
   return (
     <>
+    <div className={styles.left}></div>
+    <div className={styles.right}></div>
       <div className={styles.contentTitle}>
         <h1 className={styles.title}>SOY FRONTEND DEVELOPER</h1>
       </div>
@@ -15,8 +17,8 @@ export default function Main() {
         <p className={styles.tecnologies}>Mi stack favorito es React usando Next.js con styled components
           y supabase como base de datos.
         </p>
-        <button className={styles.ancor}>Ver mis proyectos <Icon /></button>
         <div className={styles.banner}>
+        <button className={styles.ancor}>Ver mis proyectos<Icon/></button>
           <img className={styles.img2} src="/vector.png" alt="Imagen vector" />
         </div>
       </div>

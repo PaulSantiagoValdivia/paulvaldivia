@@ -14,6 +14,7 @@ const Carousel = () => {
     '8.png',
     '1.png',
     '2.png',
+
     // Agrega las rutas de las demás imágenes
   ]);
 
@@ -52,7 +53,7 @@ const Carousel = () => {
       }else if(index === 8){
       event.target.classList.add(styles.rotate);  
     } else if (index === images.length - 1) {
-      }else if(index === 9){
+    }else if(index === 9){
       event.target.classList.add(styles.rotate);  
     } else if (index === images.length - 1) {
       event.target.classList.add(styles.rotate);

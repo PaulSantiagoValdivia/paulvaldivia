@@ -1,5 +1,11 @@
+.contentProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.projects{
+}
+
+.projects {
   color: #FFF;
   text-align: center;
   text-shadow: 0px 0px 28px #5C6BC0;
@@ -11,27 +17,37 @@
   border-bottom: 1px solid #141414;
 }
 
-.contentTitle{
+.contentTitle {
   color: #FFF;
-font-size: 22px;
-font-family: outfit;
-font-weight: 800;
+  font-size: 22px;
+  font-family: outfit;
+  font-weight: 800;
+  width: 307px;
+  justify-content: center;
 }
-.description{
+
+.description {
   color: #999;
-font-size: 16px;
-font-family: outfit;
-line-height: 24px;
+  font-size: 16px;
+  font-family: outfit;
+  line-height: 24px;
+  width: 307px;
+  justify-content: center;
 }
-.contentButtons{
-display: flex;
-flex-direction: row;
-align-items: center;
-gap: 16px;
-}
-.page{
+
+.contentButtons {
   display: flex;
-  width: 314px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.page {
+  display: flex;
+  width: 64px;
   height: 64px;
   padding: 20px;
   justify-content: center;
@@ -39,50 +55,45 @@ gap: 16px;
   gap: 10px;
   flex-shrink: 0;
   border-radius: 4px;
-background: #0D0D0D;
+  border: 1px solid #1F1F1F;
+  background: #0D0D0D;
+}
+
+.page:hover {
   border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
   border-image-slice: 1;
-  color: #FFF;
+  cursor: pointer;
+}
+
+.github {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #1F1F1F;
+  background: #0D0D0D;
+}
+
+.github:hover {
+  border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
+  border-image-slice: 1;
+  cursor: pointer;
+}
+
+.count {
+  color: #999;
   font-size: 16px;
   font-family: outfit;
-  font-weight: 700; 
+  margin-left: 28px;
+  margin-right: 28px;
 }
-.github{
-  display: flex;
-width: 314px;
-height: 64px;
-padding: 20px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex-shrink: 0;
-border-radius: 4px;
-border: 1px solid #1F1F1F;
-background: #0D0D0D;
-color: #999;
-font-size: 16px;
-font-family: outfit;
-}
-.count{
-  color: #999;
-font-size: 16px;
-font-family: outfit;
-margin-left: 28px;
-margin-right: 28px;
-}
-.preview{
-  display: flex;
-width: 44px;
-height: 44px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex-shrink: 0;
-border-radius: 8px;
-border: 1px solid #1F1F1F;
-background: #0D0D0D;
-}
-.next{
+
+.preview {
   display: flex;
   width: 44px;
   height: 44px;
@@ -94,11 +105,25 @@ background: #0D0D0D;
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
 }
+
+.next {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #1F1F1F;
+  background: #0D0D0D;
+}
+
 .carouselContainer {
   /* Estilos para el contenedor del carrusel */
   position: relative;
   overflow: hidden;
-  
+
 }
 
 
@@ -107,27 +132,51 @@ background: #0D0D0D;
   display: flex;
   transition: transform 0.3s ease-in-out;
   gap: 40px;
-  
+
 }
 
 .carouselImage {
   /* Estilos de las imágenes del carrusel */
-  width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
-  object-fit: cover; /* Ajusta el tipo de ajuste según tus necesidades */
+  width: 100%;
+  /* Ajusta el tamaño de la imagen según tus necesidades */
+  object-fit: cover;
+  /* Ajusta el tipo de ajuste según tus necesidades */
 }
-.imgInactive{
+
+.imgInactive {
   opacity: 0.5;
 }
+
 @media (min-width: 1024px) {
-  
-  .contentProjects{
+
+  .contentProjects {
     width: auto;
     height: auto;
+    align-items: flex-start;
     margin-left: 70px;
   }
-  .projects{
+
+  .contentButtons {
+    justify-content: flex-start;
+  }
+
+  .projects {
     text-align: start;
     margin-right: 70px;
   }
 
+  .contentButtons {
+    gap: 28px;
+  }
+
+  .page {
+    width: 314px;
+    height: 64px;
+  }
+
+  .github {
+    width: 314px;
+    height: 64px;
+
+  }
 }

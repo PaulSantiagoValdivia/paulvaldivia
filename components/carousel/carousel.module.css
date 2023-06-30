@@ -4,6 +4,7 @@
   width: 100%;
   white-space: nowrap;
   gap: 100px;
+  padding: auto;
 }
 
 .slide {
@@ -30,7 +31,7 @@
 @keyframes rotation {
   0% {
     transform: translateX(-00%);
-  
+
   }
 50%{
   transform: translateX(50%);
@@ -38,6 +39,6 @@
 }
   100% {
     transform: translateX(100%);
-      opacity: -0.5;
+      opacity: -1;
     }
 }
