@@ -3,6 +3,7 @@ import Main from "@/components/main/Main"
 import React from "react";
 import Projects from "@/components/projects/Projects";
 import Carousel from "@/components/carousel/Carousel";
+import AboutMe from "@/components/about-me/AboutMe";
 
 export default function Home () {
   return(
@@ -11,7 +12,7 @@ export default function Home () {
       <Main/>
       <Carousel/>
       <Projects/>
-
+      <AboutMe/>
     </>
   );
 }

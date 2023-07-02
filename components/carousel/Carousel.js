@@ -14,7 +14,8 @@ const Carousel = () => {
     '8.png',
     '1.png',
     '2.png',
-
+    '3.png',
+    '4.png',
     // Agrega las rutas de las demás imágenes
   ]);
 

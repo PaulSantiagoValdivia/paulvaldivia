@@ -53,12 +53,12 @@ export default function Projects() {
           Connect all your social media and web3 links in one place, Mint them as an NFTs and own them forever.
         </p>
         <div className={styles.contentButtons}>
-          <button className={styles.github}><Github className={styles.icon}/> </button>
-          <button className={styles.page}><Explorer/> </button>
-          <button className={styles.githubDesktop} ><Github/> Ir al repositorio en Github</button>
-          <button className={styles.pageDesktop} ><Explorer/> Ir a la pagina web</button>
-          
-          <p className={styles.count}>{currentIndex}</p>
+          <button className={styles.github}><Github className={styles} /> </button>
+          <button className={styles.page}><Explorer /> </button>
+          <button className={styles.githubDesktop} ><Github /> Ir al repositorio en Github</button>
+          <button className={styles.pageDesktop} ><Explorer /> Ir a la pagina web</button>
+
+
           <button className={styles.preview} onClick={handlePreview}>
             <Preview />
           </button>
@@ -68,6 +68,12 @@ export default function Projects() {
         </div>
         <div className={styles.carouselContainer}>
           <div ref={carouselRef} className={styles.carousel}>
+            <img
+              src="app.png"
+              alt="Image 1"
+              className={`${styles.carouselImage} ${currentIndex === 0 ? '' : styles.imgInactive}`}
+            />
+
             <img
               src="mobile.png"
               alt="Image 2"
