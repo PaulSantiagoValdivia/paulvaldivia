@@ -1,6 +1,6 @@
 import styles from './aboutme.module.css';
 import Github from '@/assets/Github';
-
+import Linkedin from '@/assets/Linkedin';
 export default function AboutMe() {
 
   const elementos = [
@@ -42,7 +42,7 @@ export default function AboutMe() {
         </div>
     </div>
         <div className={styles.divButtons}>
-          <button className={styles.linkedin} > Ir a la pagina web</button>
+          <button className={styles.linkedin} ><Linkedin/> Escribeme en linkedin</button>
         <button className={styles.github} ><Github /> Visita mi github</button>
 
         </div>

@@ -4,6 +4,7 @@ import React from "react";
 import Projects from "@/components/projects/Projects";
 import Carousel from "@/components/carousel/Carousel";
 import AboutMe from "@/components/about-me/AboutMe";
+import Footer from "@/components/footer/Footer";
 
 export default function Home () {
   return(
@@ -13,6 +14,7 @@ export default function Home () {
       <Carousel/>
       <Projects/>
       <AboutMe/>
+      <Footer/>
     </>
   );
 }
