@@ -16,6 +16,7 @@ export default function Nav() {
       </div>
       <div className={`${styles.navContentRight} ${styles.desktopOnly}`}>
         <div className={styles.git}>Github</div>
+        
         <div className={styles.contact}>Contactame</div>
       </div>
       <button className={`${styles.mobileOnly}`} onClick={() => setModalOpen(true)}>

@@ -63,10 +63,10 @@ position: absolute;
 }
 .right{
   right: 0px;
-  top: -100px;
+  top: 80px;
   position: absolute;
   width: 596px;
-height: 796px;
+height: 650px;
 flex-shrink: 0;
 border-radius: 796px;
 background: rgba(174, 88, 177, 0.05);
