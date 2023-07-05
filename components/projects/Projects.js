@@ -4,6 +4,7 @@ import Next from '@/assets/Next';
 import Preview from '@/assets/Preview';
 import Explorer from '@/assets/Explorer';
 import Github from '@/assets/Github';
+
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
@@ -12,16 +13,14 @@ export default function Projects() {
   useEffect(() => {
     const handleImageLoad = () => {
       if (carouselRef.current) {
-        const image = carouselRef.current.querySelector(`img:nth-child(${currentIndex + 1})`);
+        const image = carouselRef.current.querySelector(`img:nth-child(${currentIndex + 2})`);
         if (image) {
           setImageWidth(image.offsetWidth);
-          console.log(imageWidth);
-          console.log(currentIndex);
         }
       }
     };
 
-    handleImageLoad(); // Llamamos a la función para obtener el ancho inicial de la imagen
+    handleImageLoad();
 
     window.addEventListener('load', handleImageLoad);
 
@@ -31,8 +30,7 @@ export default function Projects() {
   }, [currentIndex]);
 
   useEffect(() => {
-    // Actualizar el desplazamiento cuando el ancho de la imagen cambie
-    carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2.774) * imageWidth}px)`;
+    carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2) * imageWidth}px)`;
   }, [currentIndex, imageWidth]);
 
   const handleNext = () => {
@@ -43,7 +41,6 @@ export default function Projects() {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? 2 : prevIndex - 1));
   };
 
-
   return (
     <>
       <div className={styles.contentProjects}>
@@ -53,12 +50,18 @@ export default function Projects() {
           Connect all your social media and web3 links in one place, Mint them as an NFTs and own them forever.
         </p>
         <div className={styles.contentButtons}>
-          <button className={styles.github}><Github className={styles} /> </button>
-          <button className={styles.page}><Explorer /> </button>
-          <button className={styles.githubDesktop} ><Github /> Ir al repositorio en Github</button>
-          <button className={styles.pageDesktop} ><Explorer /> Ir a la pagina web</button>
-
-
+          <button className={styles.github}>
+            <Github className={styles} />
+          </button>
+          <button className={styles.page}>
+            <Explorer />
+          </button>
+          <button className={styles.githubDesktop}>
+            <Github /> Ir al repositorio en Github
+          </button>
+          <button className={styles.pageDesktop}>
+            <Explorer /> Ir a la página web
+          </button>
           <button className={styles.preview} onClick={handlePreview}>
             <Preview />
           </button>
@@ -73,13 +76,11 @@ export default function Projects() {
               alt="Image 1"
               className={`${styles.carouselImage} ${currentIndex === 0 ? '' : styles.imgInactive}`}
             />
-
             <img
               src="mobile.png"
               alt="Image 2"
               className={`${styles.carouselImage} ${currentIndex === 1 ? '' : styles.imgInactive}`}
             />
-
             <img
               src="mobile.png"
               alt="Image 3"
