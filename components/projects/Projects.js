@@ -13,14 +13,16 @@ export default function Projects() {
   useEffect(() => {
     const handleImageLoad = () => {
       if (carouselRef.current) {
-        const image = carouselRef.current.querySelector(`img:nth-child(${currentIndex + 2})`);
+        const image = carouselRef.current.querySelector(`img:nth-child(${currentIndex + 1})`);
         if (image) {
           setImageWidth(image.offsetWidth);
+          console.log(imageWidth);
+          console.log(currentIndex);
         }
       }
     };
 
-    handleImageLoad();
+    handleImageLoad(); // Llamamos a la función para obtener el ancho inicial de la imagen
 
     window.addEventListener('load', handleImageLoad);
 
@@ -30,7 +32,8 @@ export default function Projects() {
   }, [currentIndex]);
 
   useEffect(() => {
-    carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2) * imageWidth}px)`;
+    // Actualizar el desplazamiento cuando el ancho de la imagen cambie
+    carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2.774) * imageWidth}px)`;
   }, [currentIndex, imageWidth]);
 
   const handleNext = () => {
