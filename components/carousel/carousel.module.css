@@ -5,6 +5,7 @@
   white-space: nowrap;
   gap: 100px;
   padding: auto;
+  justify-content: space-between;
 }
 
 .slide {
@@ -12,7 +13,7 @@
   width: 40px;
   height: 40px;
   /* ...otros estilos... */
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 2s ease, opacity 0.5s ease;
 }
 
 
@@ -22,15 +23,16 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   transform-origin: center;
+  transition: 2S;
   
 }
-
-
-
+.ultimo{
+opacity: 0;
+}
 
 @keyframes rotation {
   0% {
-    transform: translateX(-00%);
+    transform: translateX(-0%);
 
   }
 50%{

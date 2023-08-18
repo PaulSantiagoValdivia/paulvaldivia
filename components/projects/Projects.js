@@ -1,97 +1,42 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './projects.module.css';
-import Next from '@/assets/Next';
-import Preview from '@/assets/Preview';
-import Explorer from '@/assets/Explorer';
-import Github from '@/assets/Github';
+import EmojiDesktop from '../desktop-carousel/EmojiDeskp';
+import EmojiMobile from '../mobile-carousel/EmojiMobile';
 
 export default function Projects() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef(null);
-  const [imageWidth, setImageWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleImageLoad = () => {
-      if (carouselRef.current) {
-        const image = carouselRef.current.querySelector(`img:nth-child(${currentIndex + 1})`);
-        if (image) {
-          setImageWidth(image.offsetWidth);
-          console.log(imageWidth);
-          console.log(currentIndex);
-        }
-      }
+    // Función para actualizar el ancho de la ventana cuando cambie el tamaño
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
     };
 
-    handleImageLoad(); // Llamamos a la función para obtener el ancho inicial de la imagen
+    // Agregar un listener para el evento de cambio de tamaño de ventana
+    window.addEventListener('resize', handleResize);
 
-    window.addEventListener('load', handleImageLoad);
-
+    // Limpieza: remover el listener cuando el componente se desmonte
     return () => {
-      window.removeEventListener('load', handleImageLoad);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [currentIndex]);
+  }, []);
 
-  useEffect(() => {
-    // Actualizar el desplazamiento cuando el ancho de la imagen cambie
-    carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2.774) * imageWidth}px)`;
-  }, [currentIndex, imageWidth]);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
-  };
-
-  const handlePreview = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? 2 : prevIndex - 1));
-  };
+  const shouldShowCarousel = windowWidth >= 1024; // Cambiar este valor según tus necesidades
 
   return (
-    <>
-      <div className={styles.contentProjects}>
-        <div className={styles.projects}>Mis proyectos</div>
-        <h2 className={styles.contentTitle}>EmojiAPP</h2>
-        <p className={styles.description}>
-          Connect all your social media and web3 links in one place, Mint them as an NFTs and own them forever.
-        </p>
-        <div className={styles.contentButtons}>
-          <button className={styles.github}>
-            <Github className={styles} />
-          </button>
-          <button className={styles.page}>
-            <Explorer />
-          </button>
-          <button className={styles.githubDesktop}>
-            <Github /> Ir al repositorio en Github
-          </button>
-          <button className={styles.pageDesktop}>
-            <Explorer /> Ir a la página web
-          </button>
-          <button className={styles.preview} onClick={handlePreview}>
-            <Preview />
-          </button>
-          <button className={styles.next} onClick={handleNext}>
-            <Next />
-          </button>
-        </div>
-        <div className={styles.carouselContainer}>
-          <div ref={carouselRef} className={styles.carousel}>
-            <img
-              src="app.png"
-              alt="Image 1"
-              className={`${styles.carouselImage} ${currentIndex === 0 ? '' : styles.imgInactive}`}
-            />
-            <img
-              src="mobile.png"
-              alt="Image 2"
-              className={`${styles.carouselImage} ${currentIndex === 1 ? '' : styles.imgInactive}`}
-            />
-            <img
-              src="mobile.png"
-              alt="Image 3"
-              className={`${styles.carouselImage} ${currentIndex === 2 ? '' : styles.imgInactive}`}
-            />
-          </div>
-        </div>
-      </div>
-    </>
+    <div className={styles.contentProjects}>
+      <div className={styles.projects}>Mis proyectos</div>
+      <h2 className={styles.contentTitle}>EmojiAPP</h2>
+      <p className={styles.description}>
+        Connect all your social media and web3 links in one place, Mint them as an NFTs and own them forever.
+      </p>
+      {shouldShowCarousel? <EmojiDesktop />: <EmojiMobile/>}
+      <div className={styles.projects}></div>
+      <h2 className={styles.contentTitle}>LaConstru</h2>
+      <p className={styles.description}>
+        Connect all your social media and web3 links in one place, Mint them as an NFTs and own them forever.
+      </p>
+      {shouldShowCarousel? <EmojiDesktop />: <EmojiMobile/>}  
+    </div>
   );
 }

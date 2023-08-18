@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './carousel.module.css';
 
 const Carousel = () => {
-  
+
   const [images, setImages] = useState([
     '1.png',
     '2.png',
@@ -12,10 +12,16 @@ const Carousel = () => {
     '6.png',
     '7.png',
     '8.png',
+    '9.png',
     '1.png',
     '2.png',
     '3.png',
     '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '9.png',
     // Agrega las rutas de las demás imágenes
   ]);
 
@@ -30,35 +36,15 @@ const Carousel = () => {
   }, []);
 
   const handleImageLoad = (event, index) => {
-   if(index === 0){
-      event.target.classList.add(styles.rotate);  
-    }else if(index === 1){
-      event.target.classList.add(styles.rotate);  
-    
-    }else if(index === 2){
-      event.target.classList.add(styles.rotate);  
-    
-    }else if(index === 3){
-      event.target.classList.add(styles.rotate);  
-    
-    }else if(index === 4){
-      event.target.classList.add(styles.rotate);  
-    
-    }else if(index === 5){
-      event.target.classList.add(styles.rotate);  
-    
-    }else if(index === 6){
-      event.target.classList.add(styles.rotate);  
-    }else if(index === 7){
-      event.target.classList.add(styles.rotate);  
-      }else if(index === 8){
-      event.target.classList.add(styles.rotate);  
-    } else if (index === images.length - 1) {
-    }else if(index === 9){
-      event.target.classList.add(styles.rotate);  
-    } else if (index === images.length - 1) {
+    if (index !== 17) {
       event.target.classList.add(styles.rotate);
+
+    } else {
+      event.target.classList.add(styles.ultimo);
+
     }
+
+
   };
 
   return (

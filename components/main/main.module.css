@@ -1,3 +1,7 @@
+.mainCointainer{
+width: auto;
+
+}
 .contentTitle {
   display: flex;
   width: 325px;
@@ -109,7 +113,8 @@ filter: blur(111px);
 }
 
 .img2 {
-  width: 100%;
+    width: 100%;
+    position: unset;
 }
 
 .img {

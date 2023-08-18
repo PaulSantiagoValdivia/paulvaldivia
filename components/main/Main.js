@@ -4,7 +4,7 @@ import Icon from '@/assets/Icon'
 export default function Main() {
 
   return (
-    <>
+  <div className={styles.mainCointainer}>
     <div className={styles.left}></div>
     <div className={styles.right}></div>
       <div className={styles.contentTitle}>
@@ -19,9 +19,9 @@ export default function Main() {
         </p>
         <div className={styles.banner}>
         <button className={styles.ancor}>Ver mis proyectos<Icon/></button>
+      </div>
           <img className={styles.img2} src="/vector.png" alt="Imagen vector" />
         </div>
-      </div>
-    </>
+    </div>
   );
 }
