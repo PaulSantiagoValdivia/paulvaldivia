@@ -11,10 +11,9 @@ export default function Projects() {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
-    // Agregar un listener para el evento de cambio de tamaño de ventana
+    handleResize();
     window.addEventListener('resize', handleResize);
-
+    
     // Limpieza: remover el listener cuando el componente se desmonte
     return () => {
       window.removeEventListener('resize', handleResize);
