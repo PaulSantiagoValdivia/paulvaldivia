@@ -9,12 +9,14 @@ import AboutMe from "@/components/about-me/AboutMe";
 import Footer from "@/components/footer/Footer";
 
 export default function Home () {
+
+
   return(
     <>
       <Nav/>
       <Main/>
       <Carousel/>
-      <Projects/>
+      <Projects />
       <AboutMe/>
       <Footer/>
     </>

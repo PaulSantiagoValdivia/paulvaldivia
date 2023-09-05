@@ -15,13 +15,11 @@ export default function EmojiMobile() {
         const image = carouselRef.current.querySelector(`img:nth-child(${currentIndex + 1})`);
         if (image) {
           setImageWidth(image.offsetWidth);
-          console.log(imageWidth);
-          console.log(currentIndex);
         }
       }
     };
 
-    handleImageLoad(); // Llamamos a la función para obtener el ancho inicial de la imagen
+    handleImageLoad(); 
 
     window.addEventListener('load', handleImageLoad);
 
@@ -31,7 +29,6 @@ export default function EmojiMobile() {
   }, [currentIndex]);
 
   useEffect(() => {
-    // Actualizar el desplazamiento cuando el ancho de la imagen cambie
     carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 0.17) * imageWidth}px)`;
   }, [currentIndex, imageWidth]);
 

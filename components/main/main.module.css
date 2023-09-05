@@ -1,7 +1,8 @@
-.mainCointainer{
-width: auto;
+.mainCointainer {
+  width: auto;
 
 }
+
 .contentTitle {
   display: flex;
   width: 325px;
@@ -16,11 +17,22 @@ width: auto;
 .title {
   color: #FFF;
   text-align: center;
-  text-shadow: 0px 0px 28px #5C6BC0;
   font-size: 25px;
   font-family: Syne;
   font-weight: 800;
+  animation: neonGlow 2s linear infinite;
+}
 
+@keyframes neonGlow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 10px #5C6BC0, 0px 0px #5C6BC0, 0 0 30px #00ffff;
+  }
+
+  50% {
+    text-shadow: 0px 0px 28px #5C6BC0;
+  }
 }
 
 .info {
@@ -31,6 +43,17 @@ width: auto;
   align-items: center;
   height: '100vh';
   margin: 0;
+  animation: opacity 2s ;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
 }
 
 .presentation {
@@ -56,27 +79,41 @@ width: auto;
   width: 312px;
   margin: 0;
 }
-.left{
-width: 300px;
+
+.left {
+  width: 300px;
   height: 796px;
-flex-shrink: 0;
-border-radius: 796px;
-background: rgba(92, 107, 192, 0.10);
-filter: blur(111px);
-position: absolute;
+  flex-shrink: 0;
+  border-radius: 796px;
+  background: rgba(92, 107, 192, 0.10);
+  filter: blur(111px);
+  position: absolute;
+  animation: scalingAnimation 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.right{
+
+@keyframes scalingAnimation {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.right {
   right: 0px;
   top: 80px;
   position: absolute;
   width: 596px;
-height: 650px;
-flex-shrink: 0;
-border-radius: 796px;
-background: rgba(174, 88, 177, 0.05);
-filter: blur(111px);
+  height: 650px;
+  border-radius: 796px;
+  background: rgba(174, 88, 177, 0.05);
+  filter: blur(111px);
+  animation: scalingAnimation 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.ancor {  
+
+.ancor {
   margin: 0 auto;
   margin-top: 77px;
   width: 360px;
@@ -96,15 +133,17 @@ filter: blur(111px);
   line-height: normal;
 }
 
-.ancor:hover{
+.ancor:hover {
   border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
   border-image-slice: 1;
   cursor: pointer;
   color: #FFF;
 }
-.ancor:hover svg path{
- stroke: #FFF; 
+
+.ancor:hover svg path {
+  stroke: #FFF;
 }
+
 .banner {
   top: 300px;
   position: initial;
@@ -113,8 +152,8 @@ filter: blur(111px);
 }
 
 .img2 {
-    width: 100%;
-    position: unset;
+  width: 100%;
+  position: unset;
 }
 
 .img {

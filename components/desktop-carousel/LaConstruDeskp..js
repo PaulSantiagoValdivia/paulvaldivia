@@ -4,8 +4,8 @@ import Explorer from '@/assets/Explorer';
 import Github from '@/assets/Github';
 import styles from '../projects/projects.module.css';
 import React, { useState, useRef, useEffect } from 'react';
-import { MiddlewareNotFoundError } from 'next/dist/shared/lib/utils';
-export default function LaConstruDesktop() {
+
+export default function EmojiDesktop() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
   const [imageWidth, setImageWidth] = useState(0);
@@ -20,7 +20,9 @@ export default function LaConstruDesktop() {
         }
       }
     };
-    handleImageLoad(); 
+
+    handleImageLoad(); // Llamamos a la función para obtener el ancho inicial de la imagen
+
     window.addEventListener('load', handleImageLoad);
 
     return () => {
@@ -29,6 +31,7 @@ export default function LaConstruDesktop() {
   }, [currentIndex]);
 
   useEffect(() => {
+    // Actualizar el desplazamiento cuando el ancho de la imagen cambie
     carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2.774) * imageWidth}px)`;
   }, [currentIndex, imageWidth]);
 

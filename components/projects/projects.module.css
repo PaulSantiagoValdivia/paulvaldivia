@@ -2,12 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
- width: auto;
- align-items: flex-start;
- margin-left: 24px;
- 
+  width: auto;
+  align-items: flex-start;
+  margin-left: 24px;
+  transform: translateY(20px);
+  transition: opacity 2s, transform 2s;
 }
 
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .projects {
   color: #FFF;
   text-shadow: 0px 0px 28px #5C6BC0;
@@ -17,8 +22,10 @@
   margin-top: 80px;
   padding-bottom: 33px;
   border-bottom: 1px solid #141414;
-  width: calc(100% - 48px); /* Resta 48px del ancho total de la pantalla (24px de margen izquierdo + 24px de margen derecho) */
-  margin-right: 24px; /* Mantiene un margen de 24px a la derecha */
+  width: calc(100% - 48px);
+  /* Resta 48px del ancho total de la pantalla (24px de margen izquierdo + 24px de margen derecho) */
+  margin-right: 24px;
+  /* Mantiene un margen de 24px a la derecha */
 
 }
 
@@ -63,7 +70,8 @@
   border: 1px solid #1F1F1F;
   background: #0D0D0D;
 }
-.pageDesktop{
+
+.pageDesktop {
   display: none;
 }
 
@@ -87,7 +95,7 @@
   background: #0D0D0D;
 }
 
-.github:hover svg path{
+.github:hover svg path {
   fill: white;
 }
 
@@ -97,12 +105,15 @@
   cursor: pointer;
   fill: white;
 }
-.page:hover svg path{
+
+.page:hover svg path {
   fill: white;
 }
-.githubDesktop{
+
+.githubDesktop {
   display: none;
 }
+
 .count {
   color: #999;
   font-size: 16px;
@@ -145,8 +156,9 @@
   cursor: pointer;
 
 }
-.icon:hover{
-    fill: white;
+
+.icon:hover {
+  fill: white;
 }
 
 .carouselContainer {
@@ -165,6 +177,25 @@
   gap: 40px;
 
 }
+/* styles.module.css */
+.animateFadeIn {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.animateFadeIn.animateFadeIn-active {
+  opacity: 1;
+}
+
+/* Clase para la animación de deslizamiento hacia arriba (slideUp) */
+.animateSlideUp {
+  transform: translateY(20px);
+  transition: transform 1s ease-in-out;
+}
+
+.animateSlideUp.animateSlideUp-active {
+  transform: translateY(0);
+}
 
 .carouselImage {
   /* Estilos de las imágenes del carrusel */
@@ -173,17 +204,20 @@
   object-fit: cover;
   /* Ajusta el tipo de ajuste según tus necesidades */
 }
-.carouselImageDesk{
+
+.carouselImageDesk {
   display: none;
 }
+
 .imgInactive {
   opacity: 0.5;
 }
 
 @media (min-width: 1024px) {
-  .carouselImageDesk{
+  .carouselImageDesk {
     display: flex;
   }
+
   .contentProjects {
     width: auto;
     height: auto;
@@ -213,13 +247,15 @@
   }
 
   .githubDesktop:hover svg path {
-    fill: #ffffff; /* Cambia el color a blanco */
+    fill: #ffffff;
+    /* Cambia el color a blanco */
   }
-  
+
   .pageDesktop:hover svg path {
-    fill: #ffffff; /* Cambia el color a blanco */
+    fill: #ffffff;
+    /* Cambia el color a blanco */
   }
-  
+
 
   .pageDesktop {
     display: inline-block;
@@ -235,11 +271,11 @@
     gap: 20px;
     flex-shrink: 0;
     color: #999;
-font-size: 16px;
-font-family: outfit;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-size: 16px;
+    font-family: outfit;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   .githubDesktop {
@@ -262,20 +298,23 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
   }
-  .githubDesktop:hover{
+
+  .githubDesktop:hover {
     border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
     border-image-slice: 1;
     cursor: pointer;
     color: #FFF;
-    
+
   }
-  .pageDesktop:hover{
+
+  .pageDesktop:hover {
     border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
     border-image-slice: 1;
     cursor: pointer;
     color: #FFF;
   }
 }
+
 .desktopOnly {
   display: none;
 }

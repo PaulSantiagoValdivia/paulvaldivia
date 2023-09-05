@@ -2,11 +2,15 @@ import styles from './main.module.css'
 import Icon from '@/assets/Icon'
 
 export default function Main() {
+  
+  const handleClick = () => setShow(!show);
+
+
 
   return (
-  <div className={styles.mainCointainer}>
-    <div className={styles.left}></div>
-    <div className={styles.right}></div>
+    <div className={styles.mainCointainer}>
+      <div className={styles.left}></div>
+      <div className={styles.right}></div>
       <div className={styles.contentTitle}>
         <h1 className={styles.title}>SOY FRONTEND DEVELOPER</h1>
       </div>
@@ -18,10 +22,10 @@ export default function Main() {
           y supabase como base de datos.
         </p>
         <div className={styles.banner}>
-        <button className={styles.ancor}>Ver mis proyectos<Icon/></button>
-      </div>
-          <img className={styles.img2} src="/vector.png" alt="Imagen vector" />
+          <button className={styles.ancor} onclick={handleClick}>Ver mis proyectos<Icon /></button>
         </div>
+        <img className={styles.img2} src="/vector.png" alt="Imagen vector" />
+      </div>
     </div>
   );
 }

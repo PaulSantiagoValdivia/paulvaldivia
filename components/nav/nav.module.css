@@ -23,9 +23,12 @@
 cursor: pointer;
 color: #fafafa;
 }
+
 .contact:hover{
-cursor: pointer;
-color: #fafafa;
+  border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
+  border-image-slice: 1;
+  cursor: pointer;
+  color: #FFF;
 }
 @media (min-width: 1024px) {
   .navContentRight {

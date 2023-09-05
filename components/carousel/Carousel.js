@@ -22,7 +22,6 @@ const Carousel = () => {
     '7.png',
     '8.png',
     '9.png',
-    // Agrega las rutas de las demás imágenes
   ]);
 
   useEffect(() => {
@@ -52,7 +51,7 @@ const Carousel = () => {
       {images.map((image, index) => (
         <img
           key={index}
-          src={`/${image}`} // Asegúrate de que la carpeta "images" esté correctamente ubicada dentro de la carpeta "public"
+          src={`/${image}`}
           className={`${styles.slide}  `}
           alt={`Imagen ${index + 1}`}
           onLoad={(event) => handleImageLoad(event, index)}
