@@ -172,37 +172,23 @@
 
 .carousel {
   /* Estilos del carrusel */
-  display: flex;
+  height: 50vh;
+  display: inline-flex;
   transition: transform 0.3s ease-in-out;
-  gap: 40px;
-
-}
-/* styles.module.css */
-.animateFadeIn {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.animateFadeIn.animateFadeIn-active {
-  opacity: 1;
-}
-
-/* Clase para la animación de deslizamiento hacia arriba (slideUp) */
-.animateSlideUp {
-  transform: translateY(20px);
-  transition: transform 1s ease-in-out;
-}
-
-.animateSlideUp.animateSlideUp-active {
-  transform: translateY(0);
+  gap: 30px;
+  
 }
 
 .carouselImage {
   /* Estilos de las imágenes del carrusel */
-  width: 100%;
+  width: 80%;
+  display: block;
   /* Ajusta el tamaño de la imagen según tus necesidades */
   object-fit: cover;
   /* Ajusta el tipo de ajuste según tus necesidades */
+  border-radius: 10px;
+  margin-right: 20px;
+  border: 1px solid #5C6BC0
 }
 
 .carouselImageDesk {
@@ -210,10 +196,11 @@
 }
 
 .imgInactive {
-  opacity: 0.5;
+  opacity: 0.1;
+  border: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1224px) {
   .carouselImageDesk {
     display: flex;
   }

@@ -1,6 +1,6 @@
 .mainCointainer {
   width: auto;
-
+position: relative;
 }
 
 .contentTitle {
@@ -130,7 +130,12 @@
   font-family: outfit;
   font-style: normal;
   font-weight: 700;
+  z-index: 1;
   line-height: normal;
+  position:relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ancor:hover {
@@ -200,12 +205,13 @@
   }
 
   .ancor {
-    margin-left: 78px;
+    margin-left: -68px;
   }
 
   .banner {
     position: relative;
-    top: -50px;
+    top: 50px;
+    left: 180px;
     /* Ajusta los estilos según tus necesidades */
   }
 

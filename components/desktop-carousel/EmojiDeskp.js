@@ -4,7 +4,7 @@ import Explorer from '@/assets/Explorer';
 import Github from '@/assets/Github';
 import styles from '../projects/projects.module.css';
 import React, { useState, useRef, useEffect } from 'react';
-import { MiddlewareNotFoundError } from 'next/dist/shared/lib/utils';
+
 export default function LaConstruDesktop() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
@@ -20,7 +20,7 @@ export default function LaConstruDesktop() {
         }
       }
     };
-    handleImageLoad(); 
+    handleImageLoad();
     window.addEventListener('load', handleImageLoad);
 
     return () => {
@@ -29,9 +29,17 @@ export default function LaConstruDesktop() {
   }, [currentIndex]);
 
   useEffect(() => {
-    carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 2.774) * imageWidth}px)`;
-  }, [currentIndex, imageWidth]);
+    if (currentIndex === 0) {
+      carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 3.138) * imageWidth}px)`;
 
+    } else if (currentIndex === 1) {
+      carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 3.138) * imageWidth}px)`;
+
+    } else if (currentIndex === 2) {
+
+      carouselRef.current.style.transform = `translateX(-${currentIndex === 0 ? 0 : (currentIndex + 3.258) * imageWidth}px)`;
+    }
+  }, [currentIndex, imageWidth]);
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
   };
@@ -42,16 +50,10 @@ export default function LaConstruDesktop() {
   return (
     <>
       <div className={styles.contentButtons}>
-        <button className={styles.github}>
-          <Github className={styles} />
-        </button>
-        <button className={styles.page}>
-          <Explorer />
-        </button>
-        <button className={styles.githubDesktop}>
+        <button className={styles.githubDesktop}onClick={() => window.open('https://github.com/PaulSantiagoValdivia/emoji-app', '_blank')}>
           <Github /> Ir al repositorio en Github
         </button>
-        <button className={styles.pageDesktop}>
+        <button className={styles.pageDesktop} onClick={() => window.open('https://web5-iota.vercel.app/', '_blank')}>
           <Explorer /> Ir a la página web
         </button>
         <button className={styles.preview} onClick={handlePreview}>
@@ -64,17 +66,17 @@ export default function LaConstruDesktop() {
       <div className={styles.carouselContainer}>
         <div ref={carouselRef} className={styles.carousel}>
           <img
-            src="app.png"
+            src="emojiD.gif" 
             alt="Image 1"
             className={`${styles.carouselImage} ${currentIndex === 0 ? '' : styles.imgInactive}`}
           />
           <img
-            src="mobile.png"
+            src="emojiCreate.png"
             alt="Image 2"
             className={`${styles.carouselImage} ${currentIndex === 1 ? '' : styles.imgInactive}`}
           />
           <img
-            src="mobile.png"
+            src="emojiUser.png"
             alt="Image 3"
             className={`${styles.carouselImage} ${currentIndex === 2 ? '' : styles.imgInactive}`}
           />

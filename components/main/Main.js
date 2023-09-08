@@ -1,11 +1,7 @@
 import styles from './main.module.css'
 import Icon from '@/assets/Icon'
 
-export default function Main() {
-  
-  const handleClick = () => setShow(!show);
-
-
+export default function Main({ handleViewProjects }) {
 
   return (
     <div className={styles.mainCointainer}>
@@ -22,7 +18,7 @@ export default function Main() {
           y supabase como base de datos.
         </p>
         <div className={styles.banner}>
-          <button className={styles.ancor} onclick={handleClick}>Ver mis proyectos<Icon /></button>
+          <button className={styles.ancor} onClick={handleViewProjects}>Ver mis proyectos<Icon /></button>
         </div>
         <img className={styles.img2} src="/vector.png" alt="Imagen vector" />
       </div>

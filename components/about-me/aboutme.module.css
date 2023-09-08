@@ -5,7 +5,6 @@
   margin-top: 162px;
   align-items: flex-start;
   margin-bottom: 21px;
-
 }
 
 .aboutMeTitle {
@@ -44,7 +43,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  margin-top: 120px;
+  margin-top: 7 0px;
 }
 
 .list {
@@ -66,7 +65,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 200px;
+  margin-top: 48px;
 }
 
 .github {
@@ -148,6 +147,7 @@
     margin-left: 70px;
     gap: 45px;
     justify-content: flex-start;
-    margin-top: 125px;
+    margin-top: 95px;
+    margin-bottom:-100px;
   }
 }

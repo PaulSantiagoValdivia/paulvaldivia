@@ -42,17 +42,11 @@ export default function EmojiMobile() {
   return (
     <>
       <div className={styles.contentButtons}>
-        <button className={styles.github}>
+        <button className={styles.github}onClick={() => window.open('https://github.com/PaulSantiagoValdivia/emoji-app', '_blank')}>
           <Github className={styles} />
         </button>
-        <button className={styles.page}>
+        <button className={styles.page} onClick={() => window.open('https://web5-iota.vercel.app/', '_blank')}>
           <Explorer />
-        </button>
-        <button className={styles.githubDesktop}>
-          <Github /> Ir al repositorio en Github
-        </button>
-        <button className={styles.pageDesktop}>
-          <Explorer /> Ir a la página web
         </button>
         <button className={styles.preview} onClick={handlePreview}>
           <Preview />
@@ -64,12 +58,12 @@ export default function EmojiMobile() {
       <div className={styles.carouselContainer}>
         <div ref={carouselRef} className={styles.carousel}>
           <img
-            src="mobile.png"
+            src="emojiCreate.png"
             alt="Image 2"
             className={`${styles.carouselImage} ${currentIndex === 0 ? '' : styles.imgInactive}`}
           />
           <img
-            src="mobile.png"
+            src="emojiUser.png"
             alt="Image 3"
             className={`${styles.carouselImage} ${currentIndex === 1 ? '' : styles.imgInactive}`}
           />
