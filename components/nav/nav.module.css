@@ -31,6 +31,9 @@ color: #fafafa;
   color: #FFF;
 }
 @media (min-width: 1024px) {
+  .navContent{
+    margin-left: 70px;
+  }
   .navContentRight {
     display: flex;
     flex-direction: row;
@@ -38,7 +41,10 @@ color: #fafafa;
     align-items: center;
 
   }
+  .name{
+    margin-left: 0px;
 
+  }
   .git {
     color: #999;
     font-size: 16px;

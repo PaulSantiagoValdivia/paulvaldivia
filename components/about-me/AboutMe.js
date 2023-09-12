@@ -29,8 +29,10 @@ export default function AboutMe() {
         <h2 className={styles.aboutMeTitle}>
           SOBRE MI
         </h2>
-        <p className={styles.description}> Soy un programador junior con una pasión por el desarrollo web. He adquirido habilidades sólidas en la creación de sitios web. Impulsado por la curiosidad, me gusta explorar y dominar las tecnologías emergentes.
-      <br/>Siempre ansioso por enfrentar nuevos desafíos y adquirir nuevos conocimientos para mantenerme a la par con esta industria en constante expansión.</p>
+        <p className={styles.description}> Soy un programador con pasión por el desarrollo web. He adquirido habilidades sólidas en la creación de sitios web. Impulsado por la curiosidad, me gusta explorar y dominar las tecnologías emergentes.
+      <br/>
+      <br/>
+      Siempre ansioso por enfrentar nuevos desafíos y adquirir nuevos conocimientos para mantenerme a la par con esta industria en constante expansión.</p>
         <h1 className={styles.subtitle}>MI STACK FAVORITO</h1>
         <div className={styles.list}>
           <ul >

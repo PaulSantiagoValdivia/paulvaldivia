@@ -5,8 +5,14 @@
   width: auto;
   align-items: flex-start;
   margin-left: 24px;
+  transform: translateY(20px);
+  transition: opacity 2s, transform 2s;
 }
 
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 .projects {
   color: #FFF;
   text-shadow: 0px 0px 28px #5C6BC0;
@@ -17,10 +23,7 @@
   padding-bottom: 33px;
   border-bottom: 1px solid #141414;
   width: calc(100% - 48px);
-  /* Resta 48px del ancho total de la pantalla (24px de margen izquierdo + 24px de margen derecho) */
   margin-right: 24px;
-  /* Mantiene un margen de 24px a la derecha */
-
 }
 
 .contentTitle {
@@ -132,7 +135,6 @@
 
 .previewDesktop {
   display: none;
-  /* Oculta el botón en dispositivos móviles */
 
 }
 
@@ -156,7 +158,6 @@
 }
 
 .carouselContainer {
-  /* Estilos para el contenedor del carrusel */
   position: relative;
   overflow: hidden;
   margin-top: 65px;
@@ -165,7 +166,6 @@
 
 
 .carousel {
-  /* Estilos del carrusel */
   height: 50vh;
   display: inline-flex;
   transition: transform 0.3s ease-in-out;
@@ -174,15 +174,13 @@
 }
 
 .carouselImage {
-  /* Estilos de las imágenes del carrusel */
   width: 80%;
   display: block;
-  /* Ajusta el tamaño de la imagen según tus necesidades */
   object-fit: cover;
-  /* Ajusta el tipo de ajuste según tus necesidades */
-  border-radius: 10px;
-  margin-right: 20px;
-  border: 1px solid #5C6BC0
+  margin-right: 10px;
+  border: 1px solid; 
+  border-image: linear-gradient(to right, #5C6BC0, #C05CBC) 1;
+  border-image-slice: 1;
 }
 
 .carouselImageDesk {
@@ -194,6 +192,11 @@
   border: none;
 }
 
+@media (min-width: 768px) {
+  .desktopOnly {
+    display: block;
+  }
+}
 @media (min-width: 1224px) {
   .carouselImageDesk {
     display: flex;
@@ -222,9 +225,7 @@
   .page {
     display: none;
   }
-  .description{
-    width: 700px;
-  }
+
   .github {
     display: none;
   }
@@ -238,7 +239,10 @@
     fill: #ffffff;
     /* Cambia el color a blanco */
   }
-
+  .description{
+    width: 900px;
+    margin-bottom: 40px;
+  }
 
   .pageDesktop {
     display: inline-block;
@@ -296,9 +300,15 @@
     cursor: pointer;
     color: #FFF;
   }
-  .desktopOnly {
-    display: none;
-  }
+}
 
-}  
+.desktopOnly {
+  display: none;
+}
 
+@media (min-width: 2560px) {
+  .carouselImage{
+  margin-right: 50px;
+
+}
+}
