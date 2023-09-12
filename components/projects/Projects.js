@@ -22,7 +22,7 @@ export default function Projects() {
   }, []);
 
 
-  const shouldShowCarousel = windowWidth >= 970;
+  const shouldShowCarousel = windowWidth >= 1224;
   return (
     <div className={styles.contentProjects}>
       <div className={styles.projects}>Mis proyectos</div>
