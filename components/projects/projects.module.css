@@ -300,8 +300,10 @@
     cursor: pointer;
     color: #FFF;
   }
+  .description{
+    width: 700px;
+  }
 }
-
 .desktopOnly {
   display: none;
 }

@@ -1,6 +1,6 @@
 export const metadata = {
 
-  title: 'Sntiavo Valdivia',
+  title: 'Santiago Valdivia',
   openGraph: {
     title: 'portafolio',
     description: '',
