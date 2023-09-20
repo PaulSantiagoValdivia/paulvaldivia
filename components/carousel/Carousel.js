@@ -31,7 +31,6 @@ const Carousel = () => {
         return [lastImage, ...prevImages.slice(0, prevImages.length - 1)];
       });
     }, 2000);
-
   }, []);
 
   const handleImageLoad = (event, index) => {

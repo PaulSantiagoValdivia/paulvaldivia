@@ -28,19 +28,19 @@ export default function Projects() {
       <div className={styles.projects}>Mis proyectos</div>
       <h2 className={styles.contentTitle}>Zoon</h2>
       <p className={styles.description}>
-        Proyecto Freelance: Contribuí en el desarrollo de toda la aplicación aprovechando las tecnologías React, Next.js y Supabase, implementé la autenticación a través de Gmail o Magic Link para la página de inicio de sesión, habilité la integración con Discord, permitiendo a los usuarios acceder a funciones exclusivas, y trabajé en estrecha colaboración con el diseñador.
+        Proyecto Freelance: Contribuí en el desarrollo de toda la aplicación aprovechando las tecnologías React, Next.js y Supabase, implementé la autenticación a través de Gmail o Magic Link para la página de inicio de sesión.<br/><br/> Habilité la integración con Discord, permitiendo a los usuarios acceder a funciones exclusivas, y trabajé en estrecha colaboración con el diseñador.
       </p>
       {shouldShowCarousel ? <ZoonDesktop /> : <ZoonMobile />}
       <div className={styles.projects}></div>
       <h2 className={styles.contentTitle}>EmojiAPP</h2>
       <p className={styles.description}>
-        ¡Crea un perfil único con emojis en nuestra plataforma! Inicia sesión con Discord, elige tu secuencia de emojis y completa tu perfil personalizado con nombre, descripción e imagen. ¡Destaca con tu identidad única en tu propia página de usuario!
+        ¡Crea un perfil único con emojis en nuestra plataforma! Inicia sesión con Discord, elige tu secuencia de emojis y completa tu perfil personalizado con nombre, descripción e imagen.<br/><br/> ¡Destaca con tu identidad única en tu propia página de usuario!
       </p>
       {shouldShowCarousel ? <EmojiDesktop /> : <EmojiMobile />}
       <div className={styles.projects}></div>
       <h2 className={styles.contentTitle}>BoliviaMarket</h2>
       <p className={styles.description}>
-        Creé un e-commerce en React.js con Next.js y Supabase. Los proveedores tienen autenticación por Magic Link y pueden gestionar productos y personalizar sus catálogos. En la página principal se muestran todos los proveedores y se puede acceder a sus catálogos haciendo clic en el proveedor.</p>
+        Creé un e-commerce en React.js con Next.js y Supabase.<br/><br/> Los proveedores tienen autenticación por Magic Link y pueden gestionar productos y personalizar sus catálogos.<br/><br/> En la página principal se muestran todos los proveedores y se puede acceder a sus catálogos haciendo clic en el proveedor.</p>
       {shouldShowCarousel ? <BoliviaMarketDesktop /> : <BoliviaMarketMobile />}
     </div>
   );
